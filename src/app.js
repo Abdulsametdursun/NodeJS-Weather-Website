@@ -7,6 +7,7 @@ const mapUrl = require('./utils/map');
 const weatherUrl = require('./utils/weather');
 
 const app = express();
+const port = process.env.PORT || 3000;
 
 //* Define paths for Express config
 const publicDirectoryPath = path.join(__dirname, '../public');
@@ -97,6 +98,6 @@ app.get('*', (req, res) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log('Server is listing...');
+app.listen(port, () => {
+  console.log('Server is listing from port...');
 });
