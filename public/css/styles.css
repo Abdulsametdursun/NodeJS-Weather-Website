@@ -55,3 +55,7 @@ button {
   padding: 8px;
   margin: 5px;
 }
+
+#msg-2 {
+  white-space: pre-line;
+}

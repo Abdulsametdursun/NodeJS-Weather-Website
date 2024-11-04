@@ -11,8 +11,13 @@ const weatherUrl = (latitude, longitude, callback) => {
     } else {
       callback(
         undefined,
-        body.current.weather_descriptions[0] +
-          `. It is currently ${body.current.temperature} degrees out. It feels like ${body.current.feelslike} degrees out.`
+        `${body.current.weather_descriptions[0]}
+      It is currently ${body.current.temperature}°F, and feels like ${body.current.feelslike}°F.
+      Wind speed is ${body.current.wind_speed}.
+      Humidity is ${body.current.humidity}.
+      Cloud is covering ${body.current.cloudcover}%.
+      UV index is ${body.current.uv_index}.
+      Visibility is ${body.current.visibility} miles.`
       );
     }
   });
